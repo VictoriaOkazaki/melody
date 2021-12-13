@@ -193,6 +193,10 @@ path.current-floor {
   opacity: 1;
 }
 
+.flats path.current-list-elem {
+  opacity: 1;
+}
+
 .modal-title {
   font-family: "Bebas Neue Cyrillic", sans-serif;
   font-weight: normal;
@@ -215,6 +219,11 @@ path.current-floor {
 
 .flat-item {
   margin-bottom: 10px;
+}
+
+.flat-item.current-flat .flat-link {
+  color: #3596f5;
+  text-decoration: underline;
 }
 
 .flat-link {
