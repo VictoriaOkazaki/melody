@@ -362,6 +362,9 @@ path.current-floor {
     width: 760px;
   }
 
+  .header-logo {
+    width: 81px;
+  }
   .navbar-item {
     margin: 0 18px;
   }
@@ -376,6 +379,11 @@ path.current-floor {
 
   .navbar-phone {
     font-size: 12px;
+  }
+
+  .main {
+    padding-left: 15px;
+    padding-right: 10px;
   }
 
   .main-info {
@@ -405,7 +413,29 @@ path.current-floor {
     margin-top: 70px;
     font-size: 12px;
   }
+
+  .modal-dialog {
+    max-width: 760px;
+    min-height: 565px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .modal-info {
+    padding: 50px 46px;
+  }
+
+  .modal-close-button {
+    right: 22px;
+    top: 32px;
+  }
 }
 
 @media (max-width: 580px) {
+  .main-info {
+    margin-left: 20px;
+  }
 }
