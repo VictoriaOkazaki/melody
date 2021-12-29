@@ -39,10 +39,8 @@ $(document).ready(function () {
   // mouse over floor function
   floorPath.on("mouseover", function () {
     floorPath.removeClass("current-floor"); // remove active class from floor
-    currentFloor = $(this).attr("data-floor"); // get current floor attribute
-    $(".counter").text(currentFloor); // write attribute to floor counter
-    uCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 1, useGrouping: false});
-    $(".f-counter").text(currentFloor);
+    currentFloor = $(this).attr("data-floor");
+    changeCounter(currentFloor);
   });
 
   floorPath.on("click", toggleModal); //open the window on click on floor
@@ -53,10 +51,7 @@ $(document).ready(function () {
     if (currentFloor < 18) {
       currentFloor++;
       // formatting currentFloor variable to get "01" instead of "1"
-      usCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
-      uCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 1, useGrouping: false});
-      $(".counter").text(usCurrentFloor); // write attribute to floor counter
-      $(".f-counter").text(uCurrentFloor);
+      changeCounter(currentFloor);
 
       floorPath.removeClass("current-floor"); // remove active class from floor
       $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor"); // highlight current floor
@@ -66,10 +61,7 @@ $(document).ready(function () {
   counterDown.on("click", function () {
     if (currentFloor > 2) {
       currentFloor--;
-      usCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
-      uCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 1, useGrouping: false});
-      $(".counter").text(usCurrentFloor);
-      $(".f-counter").text(uCurrentFloor);
+      changeCounter(currentFloor);
 
       floorPath.removeClass("current-floor");
       $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor");
@@ -79,4 +71,11 @@ $(document).ready(function () {
   function toggleModal() { // function for opening / closing window
     modal.toggleClass("is-open");
   }
+
+  function changeCounter(currentFloor) {
+    usCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
+    uCurrentFloor = currentFloor.toLocaleString('en-US', {minimumIntegerDigits: 1, useGrouping: false});
+    $(".counter").text(usCurrentFloor); // write attribute to floor counter
+    $(".f-counter").text(uCurrentFloor);
+  };
 });
