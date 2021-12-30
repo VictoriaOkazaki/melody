@@ -49,6 +49,16 @@ body {
   color: #fff;
 }
 
+.navbar-link:hover {
+  color: #dac2b9;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-item:active {
+  text-decoration: underline;
+  transition: 0.3s ease-in-out;
+}
+
 .navbar-contacts {
   text-align: right;
 }
@@ -67,6 +77,14 @@ body {
   line-height: 20px;
   text-decoration: none;
   color: #fff;
+}
+
+.navbar-phone:hover {
+  color: #dac2b9;
+}
+
+.navbar-phone:active {
+  text-decoration: underline;
 }
 
 .main {
@@ -136,6 +154,14 @@ path.current-floor {
   border: none;
   padding: 16px 36px;
   cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #635854;
+}
+
+.button-primary:active {
+  background: #037df7;
 }
 
 .modal {

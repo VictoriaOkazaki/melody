@@ -1,0 +1,153 @@
+a {
+  cursor: pointer;
+}
+
+.footer {
+  border-top: solid 4px #3596f5;
+  margin-top: 100px;
+  padding: 0 81px;
+  background: #d7d7d7;
+  color: #635854;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-list {
+  list-style-type: none;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-item:hover {
+  background-color: #ececec;
+}
+
+.footer-contacts {
+  margin: 78px 59px 68px 37px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-text {
+  font-size: 14px;
+  width: 100%;
+}
+
+.footer-phone {
+  font-weight: bold;
+  font-size: 17px;
+  color: #635854;
+  text-decoration: none;
+  width: 150px;
+}
+
+.footer-phone:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  margin-top: 73px;
+  margin-bottom: 78px;
+}
+
+.politics {
+  margin-top: 73px;
+  margin-bottom: 79px;
+}
+
+.politics-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.politics-item {
+  color: #635854;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.politics-item:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding: 0 71px;
+  }
+  .footer-list {
+    padding-left: 0;
+  }
+
+  .politics-item {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    padding: 0 45px;
+  }
+
+  .footer-list {
+    margin-top: 5px;
+  }
+
+  .footer-company-logo {
+    height: 65px;
+    margin-top: 50px;
+  }
+
+  .footer-contacts {
+    margin: 71px 25px 61px 20px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+
+  .footer-phone {
+    font-size: 15px;
+    width: 150px;
+  }
+
+  .politics-item {
+    margin-top: -10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer {
+    margin-top: 280px;
+    min-width: 760px;
+    padding: 0 35px;
+  }
+
+  .footer-contacts {
+    margin-left: 40px;
+    margin-right: 45px;
+  }
+
+  .footer-phone {
+    font-size: 14px;
+    width: 120px;
+  }
+
+  .politics-list {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 580px) {
+}
